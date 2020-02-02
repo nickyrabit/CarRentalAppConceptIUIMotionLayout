@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.robinhood.ticker.TickerUtils;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
      boolean firstImage;
 Button button;
     NumberPicker numberPicker;
+    TextView carNameTextView;
 TickerView numberEurosTextView;
     private Handler imageSwitchHandler;
     @Override
@@ -37,6 +39,7 @@ TickerView numberEurosTextView;
         numberPicker = (NumberPicker) findViewById(R.id.horizontal_number_picker);
         numberEurosTextView = findViewById(R.id.numberEurosTextView);
         numberEurosTextView.setCharacterLists(TickerUtils.provideNumberList());
+        carNameTextView = findViewById(R.id.carNameTextView);
 
         // Set the ViewFactory of the ImageSwitcher that will create ImageView object when asked
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
@@ -88,23 +91,33 @@ TickerView numberEurosTextView;
                 if(selected==1){
                     numberEurosTextView.setText("200");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
+                    carNameTextView.setText("Audi A8");
                 }else if(selected==2){
                     numberEurosTextView.setText("310");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.bmw_black_design));
+                    carNameTextView.setText("BMW Black Design");
                 }else if(selected==3)
                 {
                     numberEurosTextView.setText("180");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.mercedes_s_class));
+                    carNameTextView.setText("Mercedes S Class");
                 }else if(selected==4){
 
                     numberEurosTextView.setText("310");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.bmw_black_design));
+                    carNameTextView.setText("BMW Black Design");
 
                 }
 
             }
         });
 
+
+
+        //set default
+        numberEurosTextView.setText("200");
+        carNameTextView.setText("Audi A8");
+        imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
 
 
 //
