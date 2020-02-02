@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
@@ -29,12 +31,83 @@ android:layout_below="@+id/carNameTextView"
 
     </ImageSwitcher>
 
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/horizontal_number_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pricesRelativeLayout"
+        android:layout_marginTop="60dp"
+        app:np_width="180dp"
+        app:np_height="64dp"
+app:np_dividerThickness="0dp"
 
-    <Button
-        android:id="@+id/button"
-        android:layout_below="@id/imageSwitcherView"
+        app:np_order="descending"
+        app:np_orientation="horizontal"
+        app:np_selectedTextColor="@color/colorSelectedText"
+        app:np_selectedTextSize="25sp"
+        app:np_textColor="@color/colorUnselectedText"
+        app:np_textSize="19sp"
+
+        app:np_fadingEdgeEnabled="false"
+        app:np_wrapSelectorWheel="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+android:id="@+id/pricesRelativeLayout"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/imageSwitcherView"
+        android:layout_height="wrap_content">
+
+
+        <com.robinhood.ticker.TickerView
+
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+            android:id="@+id/numberEurosTextView"
+            android:textSize="18sp"
+            android:text="100"
+            android:gravity="center_horizontal"
+
+            android:textColor="@color/colorPriceOnTheDahboard"
+            />
+
+        <TextView
+            android:id="@+id/signEurosTextView"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPriceOnTheDahboard"
+            android:textSize="18sp"
+            android:text="€/month"
+
+            android:layout_toRightOf="@+id/numberEurosTextView"
+            android:layout_height="wrap_content"/>
 
 
+
+    </RelativeLayout>
+
+
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_spotify"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+
+        android:layout_alignParentBottom="true"
+        android:paddingRight="20dp"
+         android:layout_marginBottom="20dp"
+        android:paddingTop="10dp"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#cfae68"
+        fancy:fb_focusColor="#d4bc88"
+        fancy:fb_radius="8dp"
+        fancy:fb_text="Book a test drive"
+        fancy:fb_textColor="#000000" />
 </RelativeLayout>
