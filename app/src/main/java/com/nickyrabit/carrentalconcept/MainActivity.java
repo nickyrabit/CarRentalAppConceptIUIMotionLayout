@@ -120,14 +120,6 @@ TickerView numberEurosTextView;
         imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
 
 
-//
-//button.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View v) {
-//        imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
-//
-//    }
-//});
 
 
    }
