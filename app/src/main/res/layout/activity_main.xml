@@ -102,7 +102,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="20dp"
@@ -121,20 +120,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintRight_toRightOf="parent"
         fancy:fb_borderColor="#cfae68"
         fancy:fb_borderWidth="1dp"
         fancy:fb_defaultColor="#cfae68"
         fancy:fb_focusColor="#d4bc88"
         fancy:fb_radius="8dp"
+        fancy:fb_textFont="@font/roboto_bold"
         fancy:fb_text="Book a test drive"
         fancy:fb_textColor="#000000" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

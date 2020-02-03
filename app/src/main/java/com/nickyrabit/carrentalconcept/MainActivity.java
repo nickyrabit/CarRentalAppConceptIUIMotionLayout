@@ -89,7 +89,7 @@ TickerView numberEurosTextView;
                 Log.d("TAGG", String.format(Locale.US, "GET VALUE : "+ picker.getValue()));
                 int selected =picker.getValue();
                 if(selected==1){
-                    numberEurosTextView.setText("200");
+                    numberEurosTextView.setText("299");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
                     carNameTextView.setText("Audi A8");
                 }else if(selected==2){
@@ -98,14 +98,14 @@ TickerView numberEurosTextView;
                     carNameTextView.setText("BMW Black Design");
                 }else if(selected==3)
                 {
-                    numberEurosTextView.setText("180");
+                    numberEurosTextView.setText("185");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.mercedes_s_class));
                     carNameTextView.setText("Mercedes S Class");
                 }else if(selected==4){
 
                     numberEurosTextView.setText("310");
-                    imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.bmw_black_design));
-                    carNameTextView.setText("BMW Black Design");
+                    imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.bmw_black_x5));
+                    carNameTextView.setText("BMW X5");
 
                 }
 
