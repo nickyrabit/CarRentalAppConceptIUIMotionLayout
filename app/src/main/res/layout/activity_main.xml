@@ -90,6 +90,28 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/pleaseWaitTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tafadhali subiri wakati tunatafuta upatikanaji wa hili gari"
+        android:textColor="@color/colorSelectedText"
+        android:textSize="16sp"
+        android:textAlignment="gravity"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <mehdi.sakout.fancybuttons.FancyButton
         android:id="@+id/btn_spotify"
