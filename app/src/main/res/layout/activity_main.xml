@@ -42,14 +42,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pricesRelativeLayout"
         app:np_dividerThickness="0dp"
-
         app:np_fadingEdgeEnabled="false"
         app:np_height="64dp"
         app:np_order="descending"
         app:np_orientation="horizontal"
         app:np_selectedTextColor="@color/colorSelectedText"
         app:np_selectedTextSize="25sp"
-
         app:np_textColor="@color/colorUnselectedText"
         app:np_textSize="19sp"
         app:np_width="180dp"
@@ -81,11 +79,11 @@
 
         <TextView
             android:id="@+id/signEurosTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/numberEurosTextView"
             android:text="€/month"
-
+            android:maxLines="1"
             android:textColor="@color/colorPriceOnTheDahboard"
             android:textSize="18sp" />
 

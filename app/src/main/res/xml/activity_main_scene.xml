@@ -12,13 +12,22 @@
         <OnClick
             app:targetId="@id/btn_spotify"
             app:clickAction="toggle" />
-<KeyFrameSet>  <KeyAttribute
+<KeyFrameSet>
+    <KeyAttribute
             app:framePosition="100"
             app:motionTarget="@id/imageSwitcherView"
             android:scaleY="1.5"
-            android:scaleX="1.5"
-            />
+            android:scaleX="1.5" />
 
+    <KeyAttribute
+        app:framePosition="10"
+        app:motionTarget="@id/horizontal_number_picker"
+        android:alpha="0.0" />
+
+    <KeyAttribute
+        app:framePosition="70"
+        app:motionTarget="@id/btn_spotify"
+        android:alpha="0.0" />
 </KeyFrameSet>
 
     </Transition>
@@ -30,9 +39,47 @@
            android:layout_width="wrap_content"
            android:layout_height="300dp"
            app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/carNameTextView">
+           app:layout_constraintTop_toBottomOf="@+id/carNameTextView"/>
+        <Constraint
+            android:id="@+id/pricesRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1.0"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSwitcherView"
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
-   </Constraint>
+        </Constraint>
+
+        <Constraint
+
+            android:id="@+id/horizontal_number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pricesRelativeLayout"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pricesRelativeLayout"
+            app:np_dividerThickness="0dp"
+            app:np_fadingEdgeEnabled="false"
+            app:np_height="64dp"
+            app:np_order="descending"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorSelectedText"
+            app:np_selectedTextSize="25sp"
+            app:np_textColor="@color/colorUnselectedText"
+            app:np_textSize="19sp"
+            app:np_width="180dp"
+            app:np_wrapSelectorWheel="true"
+android:alpha="1.0"
+
+
+            />
           </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -46,5 +93,71 @@
                 app:layout_constraintTop_toBottomOf="@+id/carNameTextView">
 
         </Constraint>
+
+
+        <Constraint
+            android:id="@+id/pricesRelativeLayout"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSwitcherView"
+
+
+            >
+
+        </Constraint>
+
+
+        <Constraint
+
+            android:id="@+id/horizontal_number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pricesRelativeLayout"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pricesRelativeLayout"
+            app:np_dividerThickness="0dp"
+            app:np_fadingEdgeEnabled="false"
+            app:np_height="64dp"
+            app:np_order="descending"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorSelectedText"
+            app:np_selectedTextSize="25sp"
+            app:np_textColor="@color/colorUnselectedText"
+            app:np_textSize="19sp"
+            app:np_width="180dp"
+            app:np_wrapSelectorWheel="true"
+            android:alpha="0.0"
+
+
+            />
+
+        <Constraint
+            android:id="@+id/btn_spotify"
+            android:alpha="0.0"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
           </ConstraintSet>
+
+
 </MotionScene>
