@@ -30,9 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carNameTextView">
+        app:layout_constraintTop_toBottomOf="@+id/carNameTextView"/>
 
-    </ImageSwitcher>
 
     <com.shawnlin.numberpicker.NumberPicker
         android:id="@+id/horizontal_number_picker"
