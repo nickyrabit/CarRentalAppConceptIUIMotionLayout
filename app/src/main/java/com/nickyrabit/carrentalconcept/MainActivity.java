@@ -2,6 +2,7 @@ package com.nickyrabit.carrentalconcept;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -25,10 +26,10 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
      ImageSwitcher imageSwitcher;
      boolean firstImage;
-Button button;
+    Button button;
     NumberPicker numberPicker;
     TextView carNameTextView;
-TickerView numberEurosTextView;
+    TickerView numberEurosTextView;
     private Handler imageSwitchHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ TickerView numberEurosTextView;
         numberEurosTextView = findViewById(R.id.numberEurosTextView);
         numberEurosTextView.setCharacterLists(TickerUtils.provideNumberList());
         carNameTextView = findViewById(R.id.carNameTextView);
-
+        carNameTextView.setTypeface(carNameTextView.getTypeface(), Typeface.BOLD);
         // Set the ViewFactory of the ImageSwitcher that will create ImageView object when asked
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
 
@@ -73,8 +74,6 @@ TickerView numberEurosTextView;
 
 
 
-        // Using string values
-// IMPORTANT! setMinValue to 1 and call setDisplayedValues after setMinValue and setMaxValue
         final String[] data = {"4 Seater", "5 Seater", "7 Seater", "8 Seater"};
         numberPicker.setMinValue(1);
         numberPicker.setMaxValue(data.length);
@@ -89,7 +88,7 @@ TickerView numberEurosTextView;
                 Log.d("TAGG", String.format(Locale.US, "GET VALUE : "+ picker.getValue()));
                 int selected =picker.getValue();
                 if(selected==1){
-                    numberEurosTextView.setText("299");
+                    numberEurosTextView.setText("294");
                     imageSwitcher.setImageDrawable(getResources().getDrawable(R.drawable.audi_a8));
                     carNameTextView.setText("Audi A8");
                 }else if(selected==2){
